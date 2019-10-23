@@ -29,7 +29,7 @@ export class BuilderApiClient {
   private store: AppStore;
 
   constructor(private token: string = '') {
-    this.urlPrefix = `${config['base_url'] || ''}/v1`;
+    this.urlPrefix = 'v1';
     this.headers = token ? { 'Authorization': `Bearer ${token}` } : {};
     this.jsonHeaders = { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' };
     this.store = new AppStore();
